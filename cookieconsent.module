@@ -51,9 +51,9 @@ function cookieconsent_page_attachments(array &$attachments) {
 
   if ($config->get('customise')) {
     // Set our custom texts.
-    $attachments['#attached']['drupalSettings']['cookieconsent']['message'] = $config->get('headline_text');
-    $attachments['#attached']['drupalSettings']['cookieconsent']['dismiss'] = $config->get('accept_button_text');
-    $attachments['#attached']['drupalSettings']['cookieconsent']['learnMore'] = $config->get('read_more_button_text');
+    $attachments['#attached']['drupalSettings']['cookieconsent']['message'] = t($config->get('headline_text'));
+    $attachments['#attached']['drupalSettings']['cookieconsent']['dismiss'] = t($config->get('accept_button_text'));
+    $attachments['#attached']['drupalSettings']['cookieconsent']['learnMore'] = t($config->get('read_more_button_text'));
   }
   $attachments['#attached']['drupalSettings']['cookieconsent']['link'] = $config->get('cookie_policy');
   $attachments['#attached']['drupalSettings']['cookieconsent']['path'] = $config->get('path');
@@ -72,11 +72,11 @@ function cookieconsent_page_attachments(array &$attachments) {
   $renderer = \Drupal::service('renderer');
   $element = [
     '#theme' => 'cookieconsent',
-    '#dismiss' => $config->get('accept_button_text'),
-    '#message' => $config->get('headline_text'),
+    '#dismiss' => t($config->get('accept_button_text')),
+    '#message' => t($config->get('headline_text')),
     '#target' => $config->get('target'),
     '#link' => $config->get('cookie_policy'),
-    '#learn_more' => $config->get('read_more_button_text'),
+    '#learn_more' => t($config->get('read_more_button_text')),
   ];
   /** @var Drupal\Core\Render\Markup $markup */
   $markup = $renderer->renderRoot($element);
