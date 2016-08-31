@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\cookieconsent\Form\SettingsForm.
- */
-
 namespace Drupal\cookieconsent\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
