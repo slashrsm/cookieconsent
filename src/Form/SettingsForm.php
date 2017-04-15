@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains Drupal\cookieconsent\Form\SettingsForm.
+ */
+
 namespace Drupal\cookieconsent\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
@@ -75,11 +80,10 @@ class SettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('customise'),
     ];
     $form['texts']['headline_text'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Headline Text'),
       '#description' => $this->t('The message shown by the plugin.'),
-      '#maxlength' => 255,
-      '#size' => 64,
+      '#rows' => 2,
       '#default_value' => $config->get('headline_text'),
       '#states' => [
         'visible' => [
