@@ -42,7 +42,7 @@ class SettingsForm extends ConfigFormBase {
     ];
     $form['theme'] = [
       '#type' => 'select',
-      '#options' => array(
+      '#options' => [
         'none' => $this->t('- None -'),
         'dark-top' => $this->t('Dark Top'),
         'dark-floating' => $this->t('Dark Floating'),
@@ -50,7 +50,7 @@ class SettingsForm extends ConfigFormBase {
         'light-floating' => $this->t('Light Floating'),
         'light-top' => $this->t('Light Top'),
         'light-bottom' => $this->t('Light Bottom'),
-      ),
+      ],
       '#title' => $this->t('Choose your theme'),
       '#description' => $this->t('Select the theme you wish to use.'),
       '#default_value' => $config->get('theme'),
@@ -81,11 +81,11 @@ class SettingsForm extends ConfigFormBase {
       '#maxlength' => 255,
       '#size' => 64,
       '#default_value' => $config->get('headline_text'),
-      '#states' => array(
-        'visible' => array(
-          ':input[name="customise"]' => array('checked' => TRUE),
-        ),
-      ),
+      '#states' => [
+        'visible' => [
+          ':input[name="customise"]' => ['checked' => TRUE],
+        ],
+      ],
     ];
     $form['texts']['accept_button_text'] = [
       '#type' => 'textfield',
@@ -93,11 +93,11 @@ class SettingsForm extends ConfigFormBase {
       '#maxlength' => 255,
       '#size' => 64,
       '#default_value' => $config->get('accept_button_text'),
-      '#states' => array(
-        'visible' => array(
-          ':input[name="customise"]' => array('checked' => TRUE),
-        ),
-      ),
+      '#states' => [
+        'visible' => [
+          ':input[name="customise"]' => ['checked' => TRUE],
+        ],
+      ],
     ];
     $form['texts']['read_more_button_text'] = [
       '#type' => 'textfield',
@@ -106,11 +106,11 @@ class SettingsForm extends ConfigFormBase {
       '#maxlength' => 255,
       '#size' => 64,
       '#default_value' => $config->get('read_more_button_text'),
-      '#states' => array(
-        'visible' => array(
-          ':input[name="customise"]' => array('checked' => TRUE),
-        ),
-      ),
+      '#states' => [
+        'visible' => [
+          ':input[name="customise"]' => ['checked' => TRUE],
+        ],
+      ],
     ];
     $form['cookie_policy'] = [
       '#type' => 'url',
