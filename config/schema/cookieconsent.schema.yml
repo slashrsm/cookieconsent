@@ -13,3 +13,6 @@ cookieconsent.settings:
     read_more_button_text:
       type: label
       label: 'Read more button text'
+    cookie_policy:
+      type: label
+      label: 'Your cookie policy'
