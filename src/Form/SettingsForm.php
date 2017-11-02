@@ -63,7 +63,7 @@ class SettingsForm extends ConfigFormBase {
     $form['theme_path'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Path to custom CSS file'),
-      '#description' => $this->t('Specify the path to the custom CSS file to use (e.g. <em>themes/[your-theme]/css/cookie-consent.css</em>). If you haven\'t selected a theme above, this custom CSS file is the only one loaded.'),
+      '#description' => $this->t('Specify the path to the custom CSS file to use (e.g. <em>themes/[your-theme]/css/cookie-consent.css</em>). This custom CSS file will load only if NO theme is specified above.'),
       '#maxlength' => 255,
       '#size' => 64,
       '#default_value' => $config->get('theme_path'),
