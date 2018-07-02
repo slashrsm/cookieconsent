@@ -69,7 +69,7 @@ function cookieconsent_page_attachments(array &$attachments) {
     }
 
     $attachments['#attached']['drupalSettings']['cookieconsent']['path'] = $config->get('path');
-    $attachments['#attached']['drupalSettings']['cookieconsent']['expiry'] = $config->get('expiry');
+    $attachments['#attached']['drupalSettings']['cookieconsent']['expiry'] = (int) $config->get('expiry');
     $attachments['#attached']['drupalSettings']['cookieconsent']['target'] = $config->get('target');
 
     // Set the cookie domain.
