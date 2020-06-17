@@ -65,7 +65,7 @@ function cookieconsent_page_attachments(array &$attachments) {
     $alias = '';
     $node_id = $config->get('cookie_policy');
     if (is_numeric($node_id)) {
-      $alias = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $node_id])->toString();
+      $alias = Url::fromRoute('entity.node.canonical', ['node' => $node_id])->toString();
     }
     $attachments['#attached']['drupalSettings']['cookieconsent']['link'] = $alias;
 
